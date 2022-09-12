@@ -1,4 +1,4 @@
-import { Keyboard, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Animated, Keyboard, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRef, useState } from "react";
 import { api } from "../../services/api";
@@ -24,7 +24,7 @@ type AsteroidType = {
 
 export default function Asteroids() {
     const [asteroid, setAsteroid] = useState('')
-    const [data, setData] = useState<AsteroidType>()
+    const [data, setData] = useState<AsteroidType | null>()
     const refInput = useRef(null)
 
     const search = async() => {
@@ -82,7 +82,7 @@ export default function Asteroids() {
                     <Text style={styles.textData}>Last observation: {data.orbital_data.last_observation_date}</Text>
 
                     <TouchableOpacity style={styles.btnNewSearch} onPress={newSearch}>
-                        <Text style={styles.btnText}>New search</Text>
+                        <Animated.Text style={styles.btnText}>New search</Animated.Text>
                     </TouchableOpacity>
                 </View>    
             }
