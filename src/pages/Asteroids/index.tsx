@@ -48,8 +48,8 @@ export default function Asteroids() {
 
     const newSearch = () => {
         setAsteroid('')
+        setData(null)
         refInput.current.focus()
-        Keyboard.dismiss()
     }
 
     return (
@@ -84,7 +84,7 @@ export default function Asteroids() {
                     <TouchableOpacity style={styles.btnNewSearch} onPress={newSearch}>
                         <Text style={styles.btnText}>New search</Text>
                     </TouchableOpacity>
-                </View>
+                </View>    
             }
         </SafeAreaView>
     )
