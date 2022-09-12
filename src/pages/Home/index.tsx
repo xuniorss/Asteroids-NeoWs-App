@@ -7,9 +7,8 @@ import { StackParamsList } from "../../routes/app.routes";
 export default function Home() {
     const navigation = useNavigation<NativeStackNavigationProp<StackParamsList>>()
 
-    const asteroids = () => {
-        navigation.navigate('Asteroids')
-    }
+    const asteroids = () => { navigation.navigate('Asteroids') }
+    const techtransfer = () => { navigation.navigate('Techtransfer') }
 
     return (
         <SafeAreaView style={styles.container}>
@@ -18,6 +17,10 @@ export default function Home() {
 
             <TouchableOpacity style={styles.button} onPress={asteroids}>
                 <Text style={styles.buttonText}>Asteroids - NeoWs</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.button} onPress={techtransfer}>
+                <Text style={styles.buttonText}>TechTransfer</Text>
             </TouchableOpacity>
         </SafeAreaView>
     )
@@ -41,6 +44,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 8,
+        marginBottom: 15,
     },
     buttonText: {
         color: '#FFF',
