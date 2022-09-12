@@ -78,7 +78,7 @@ export default function Asteroids() {
                     <Text style={styles.textData}>Diameter (meters): {data.estimated_diameter.meters.estimated_diameter_max.toFixed(2)} M</Text>
                     <Text style={styles.textData}>Potentially hazardous: {data.is_potentially_hazardous_asteroid ? 'Yes' : 'No'}</Text>
                     <Text style={styles.textData}>Orbit id: {data.orbital_data.orbit_id}</Text>
-                    <Text style={styles.textData}>First observatio: {data.orbital_data.first_observation_date}</Text>
+                    <Text style={styles.textData}>First observation: {data.orbital_data.first_observation_date}</Text>
                     <Text style={styles.textData}>Last observation: {data.orbital_data.last_observation_date}</Text>
 
                     <TouchableOpacity style={styles.btnNewSearch} onPress={newSearch}>
